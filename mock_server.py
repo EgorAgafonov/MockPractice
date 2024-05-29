@@ -17,7 +17,7 @@ class MockServer:
         self.stop_event = threading.Event()
 
     def start(self):
-        server_address = ('адрес мок-сервера', 8000)
+        server_address = ('https://f6b92c67-cfe4-4fd4-8084-e2e5efa9d5c9.mock.pstmn.io/weather', 8000)
         self.server = HTTPServer(server_address, MockServerHandler)
         print('Mock server started on port 8000')
         while not self.stop_event.is_set():
@@ -25,7 +25,6 @@ class MockServer:
 
 
 def run_mock_server():
-    global mock_server
     mock_server = MockServer()
     mock_server.start()
 
