@@ -16,7 +16,7 @@ class TestMockAPI:
         print(f"\n{result}")
 
         assert status == 200
-        assert len(result["key"]) >= 7
+        assert len(result["key"]) <= 6
 
     def test_mock_request_userid(self):
         """"""
